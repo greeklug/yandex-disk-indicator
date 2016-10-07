@@ -1,10 +1,23 @@
 #!/bin/bash
+
+# prepare changelog
+version=$(sed -n "/appVer = '.*'/p" ../yandex-disk-indicator.py | grep -o '[0-9]\.[0-9]\.[0-9]')
+serie='xenial'
+clear
+
+sed "s/@serie/$serie/" changelog > yd-tools/debian/changelog
+sed -i "s/@version/$version/" yd-tools/debian/changelog
+sed -i "s/@date/$(date -R)/" yd-tools/debian/changelog
+cat yd-tools/debian/changelog 
+
+# prepare buld directory
 cd yd-tools/
 mkdir -p usr/bin
 mkdir -p usr/share/applications
 mkdir -p usr/share/locale/ru/LC_MESSAGES
 mkdir -p usr/share/locale/el/LC_MESSAGES
 mkdir -p usr/share/locale/bg/LC_MESSAGES
+mkdir -p usr/share/locale/be/LC_MESSAGES
 mkdir -p usr/share/yd-tools/fm-actions/Dolphin
 mkdir -p usr/share/yd-tools/fm-actions/Nautilus_Nemo
 mkdir -p usr/share/yd-tools/fm-actions/pantheon-files
@@ -16,6 +29,7 @@ cp ../../ya-setup usr/share/yd-tools/
 cp ../../translations/yandex-disk-indicator_ru.mo usr/share/locale/ru/LC_MESSAGES/yandex-disk-indicator.mo
 cp ../../translations/yandex-disk-indicator_el.mo usr/share/locale/el/LC_MESSAGES/yandex-disk-indicator.mo
 cp ../../translations/yandex-disk-indicator_bg.mo usr/share/locale/bg/LC_MESSAGES/yandex-disk-indicator.mo
+cp ../../translations/yandex-disk-indicator_be.mo usr/share/locale/be/LC_MESSAGES/yandex-disk-indicator.mo
 cp ../../translations/*.lang usr/share/yd-tools/translations/
 cp ../../Yandex.Disk-indicator.desktop usr/share/applications/
 cp ../../icons/readme usr/share/yd-tools/icons/
@@ -49,9 +63,9 @@ chmod -R u+rw *
 chmod -R go-w *
 chmod a+x debian/rules
 chmod a+x debian/pre*
+chmod a+x debian/post*
 chmod a+x usr/share/yd-tools/*
 chmod a+x usr/share/yd-tools/fm-actions/Nautilus_Nemo/*
-chmod a+x usr/share/yd-tools/fm-actions/Dolphin/*
 chmod a+x usr/share/yd-tools/fm-actions/pantheon-files/*.sh
 chmod a+x usr/bin/*
 chmod a+x usr/share/applications/*

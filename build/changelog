@@ -1,0 +1,7 @@
+yd-tools (@version) @serie; urgency=medium
+  * Changes:
+    - Fix for issue #164
+    - Package optimization
+    -Build scripts changes 
+
+ -- Sly_tom_cat <slytomcat@mail.ru>  @date

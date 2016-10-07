@@ -1,5 +1,9 @@
 ### **![yandex-disk-indicator](https://github.com/slytomcat/yandex-disk-indicator/blob/master/icons/yd-128.png)**
 # yandex-disk-indicator
+[![license](https://img.shields.io/badge/license-GPL%20v.3-green.svg)](https://github.com/slytomcat/yandex-disk-indicator/blob/master/LICENSE)
+[![wiki](https://img.shields.io/badge/wiki-available-green.svg)](https://github.com/slytomcat/yandex-disk-indicator/wiki)
+[![PPA](https://img.shields.io/badge/PPA-available-green.svg)](https://launchpad.net/~slytomcat/+archive/ubuntu/ppa)
+
 Desktop panel indicator for YandexDisk CLI client for Linux
 
 INSTALLATION:
@@ -14,6 +18,12 @@ Installation from Github:
 
 Installation from Launchpad PPA: 
  - Visit PPA: https://launchpad.net/~slytomcat/+archive/ubuntu/ppa and follow the instructions.
+
+INTERFACE LANGUAGES
+
+English, Russian, Greek, Bulgarian, Belorussian.
+
+Everybody welcome to translate it to other languages!  
 
 
 NOTES:

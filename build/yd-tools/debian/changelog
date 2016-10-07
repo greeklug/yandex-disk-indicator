@@ -1,6 +1,7 @@
-yd-tools (1.8.9) trusty; urgency=medium
-
+yd-tools (1.9.5) xenial; urgency=medium
   * Changes:
-    -- updated Bulgarian translation
+    - Fix for issue #164
+    - Package optimization
+    -Build scripts changes 
 
- -- Sly_tom_cat <slytomcat@mail.ru>  Fry, 26 Mar 2016 00:22:17 +0300
+ -- Sly_tom_cat <slytomcat@mail.ru>  Fri, 16 Sep 2016 23:37:02 +0300

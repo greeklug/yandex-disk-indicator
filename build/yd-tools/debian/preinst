@@ -1,7 +1,8 @@
 #! /bin/bash -e
 #DEBHELPER#
-userName=$(eval echo $SUDO_USER) 
-userHome=$(eval echo ~${SUDO_USER})
+
+#echo prinst started
+#sleep 3
 
 # check that yandex-disk daemon is installed
 if ! [ -e "/usr/bin/yandex-disk" ]
@@ -10,10 +11,5 @@ then
     exit 1
 fi
 
-# kill all running indicators
-for n in $(pgrep -f "python3 /usr/bin/yandex-disk-indicator") 
-do
-    kill $n
-done
-
+#echo prinst finished
 exit 0
